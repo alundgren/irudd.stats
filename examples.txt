@@ -1,0 +1,33 @@
+-- Befolkning 2010, 2011
+HTTP POST http://api.scb.se/OV0104/v1/doris/sv/ssd/BE/BE0101/BE0101A/BefolkningNy
+
+{
+"query": [
+ {
+ "code": "ContentsCode",
+  "selection": {
+    "filter": "item",
+    "values": [
+      "BE0101N1"
+    ]
+   }
+},
+{
+  "code": "Tid",
+   "selection": {
+   "filter": "item",
+   "values": [
+   "2010",
+   "2011"
+   ]
+  }
+ }
+],
+"response": {
+  "format": "json-stat2"
+ }
+}
+
+resultat:
+
+{"class":"dataset","label":"Folkmängd efter tabellinnehåll och år","source":"SCB","updated":"2022-02-07T14:32:00Z","id":["ContentsCode","Tid"],"size":[1,2],"dimension":{"ContentsCode":{"label":"tabellinnehåll","category":{"index":{"BE0101N1":0},"label":{"BE0101N1":"Folkmängd"},"unit":{"BE0101N1":{"base":"antal","decimals":0}}}},"Tid":{"label":"år","category":{"index":{"2010":0,"2011":1},"label":{"2010":"2010","2011":"2011"}}}},"value":[9415570,9482855],"role":{"time":["Tid"],"metric":["ContentsCode"]},"version":"2.0","extension":{"px":{"infofile":"BE0101","tableid":"TAB638","decimals":0}}}
